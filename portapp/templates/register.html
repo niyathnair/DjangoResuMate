@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Register</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        <form action="register" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="username" required placeholder="username"><br>
+            <input type="text" name="desc" placeholder="desc"><br>
+            <input type="text" name="job_role" placeholder="Experience"><br>
+            <input type="text" name="degree" placeholder="Qualification"><br>
+            <input type="email" name="email" placeholder="E-mail"><br>
+            <input type="file" name="image1" accept="image/png, image/jpeg"><br> <!-- Accept PNG and JPEG files -->
+            <input type="file" name="image2" accept="image/png, image/jpeg"><br>
+
+            <input type="submit">
+
+        </form>
+
+        <div>
+            {% for message in messages %}
+            <h3>{{message}}</h3>
+            {% endfor %}
+        </div>
+
+        <script src="" async defer></script>
+    </body>
+</html>
