@@ -1,2 +1,2 @@
 # portfolio
-# ignore the portfolio folder 
+ ignore the portfolio folder 
